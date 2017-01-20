@@ -1,37 +1,61 @@
+@@@import "compass";
+@-webkit-keyframes circle {
+  50% {
+    text-shadow: -8px -8px 4px black; } }
+@-moz-keyframes circle {
+  50% {
+    text-shadow: -8px -8px 4px black; } }
+@-o-keyframes circle {
+  50% {
+    text-shadow: -8px -8px 4px black; } }
+@keyframes circle {
+  50% {
+    text-shadow: -8px -8px 4px black; } }
 body {
   margin: 0;
-  background-color: #3DDC97;
+  background-color: #337AB7;
   overflow: hidden; }
 
 #start {
-  position: relative;
-  top: -150px;
+  display: inline-block;
+  margin: 20% auto;
+  padding: 10px;
   font-size: 3em;
-  left: -220px; }
+  border-radius: 5px;
+  background-color: #FCFCFC;
+  color: black; }
 
 .icon:before {
   font-family: "MeteoconsRegular";
   content: attr(data-icon); }
 
 #sun {
-  position: relative;
-  color: white;
+  float: left;
+  margin-top: -25%;
+  margin-left: -10%;
+  color: #FAD873;
   font-size: 44em;
-  right: 250px;
-  top: -150px;
   text-decoration: none;
-  text-shadow: 2px 4px 4px black; }
+  text-shadow: 8px 8px 4px black;
+  -webkit-animation: circle 4s ease infinite;
+  -moz-animation: circle 4s ease infinite;
+  -o-animation: circle 4s ease infinite;
+  animation: circle 4s ease infinite; }
   #sun:hover {
     cursor: default; }
 
 #cloud {
-  position: relative;
+  float: right;
+  margin-bottom: -35%;
+  margin-right: -15%;
   color: white;
   font-size: 40em;
-  top: -390px;
-  left: 800px;
   text-decoration: none;
-  text-shadow: -10px 4px 4px black; }
+  text-shadow: -8px 8px 4px black;
+  -webkit-animation: circle 4s ease infinite;
+  -moz-animation: circle 4s ease infinite;
+  -o-animation: circle 4s ease infinite;
+  animation: circle 4s ease infinite; }
   #cloud:hover {
     cursor: default; }
 
