@@ -1,6 +1,6 @@
 @@@import "compass"
 //variables
-$blue: #256EFF
+$clearSky: #337ab7
 $spanishViolet: #46237A
 $eucalyptus: #3DDC97
 $babyPowder: #FCFCFC
@@ -38,8 +38,9 @@ $magicPotion: #FF495C
 body
   margin: 0
   background:
-    color: #337AB7
+    color: $clearSky
   overflow: hidden
+  font-family: 'Crete Round', serif
 
 .icon:before
   font-family: 'MeteoconsRegular'
@@ -55,20 +56,20 @@ body
   padding: 10px
   font-size: 3em
   border-radius: 5px
-  background-color: $babyPowder
-  color: black
+  color: white
+  box-shadow: 10px 10px 4px black
 
 .init
   flex-wrap: wrap
   margin:
-    top: 59%
+    top: 20%
     left: 15%
 
 #sun
   width: 33.33%
   flex-wrap: wrap
   margin:
-    top: 10%
+    top: -30%
     left: -23%
     right: 7%
   color: #FAD873
@@ -83,7 +84,7 @@ body
   width: 33.33%
   flex-wrap: wrap
   margin:
-    top: 60%
+    top: 17%
   color: white
   font-size: 40em
   text-decoration: none
@@ -91,6 +92,10 @@ body
   +round
   &:hover
     cursor: default
+
+.btn
+  &:focus
+    outline: none
 
 @font-face
   font-family: 'MeteoconsRegular'
