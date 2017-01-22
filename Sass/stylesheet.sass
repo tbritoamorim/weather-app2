@@ -1,50 +1,148 @@
+@@@import "compass"
 //variables
-$blue: #256EFF
+$clearSky: #337ab7
 $spanishViolet: #46237A
 $eucalyptus: #3DDC97
 $babyPowder: #FCFCFC
 $magicPotion: #FF495C
 
+//mixins
+=day
+  background-color: $clearSky
+
+=night
+  background-color: darken($clearSky, 20%)
+
 =shadow($side)
-  text-shadow: $side 4px 4px black
+  text-shadow: $side 8px 4px black
+
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+
+  @-moz-keyframes #{$name}
+    @content
+
+  @-o-keyframes #{$name}
+    @content
+
+  @keyframes #{$name}
+    @content
+
+=animate($name, $duration, $timing-function, $iteration)
+  -webkit-animation: $name $duration $timing-function $iteration
+  -moz-animation: $name $duration $timing-function $iteration
+  -o-animation: $name $duration $timing-function $iteration
+  animation: $name $duration $timing-function $iteration
+//keyframes
++keyframes(circle)
+  50%
+    text-shadow: -8px -8px 4px black
+//animations
+=round
+  +animate(circle, 4s, ease, infinite)
 
 body
   margin: 0
   background:
-    color: $eucalyptus
+    color: $clearSky
   overflow: hidden
-
-#start
-  position: relative
-  top: -150px
-  font-size: 3em
-  left: -220px
+  font-family: 'Crete Round', serif
 
 .icon:before
   font-family: 'MeteoconsRegular'
   content: attr(data-icon)
 
-#sun
-  position: relative
+.main
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
+#start
+  width: 100%
+  padding: 10px
+  font-size: 3em
+  border-radius: 5px
   color: white
+  box-shadow: 10px 10px 4px black
+
+.init
+  flex-wrap: wrap
+  margin:
+    top: 10%
+    left: 15%
+
+#sun
+  width: 33.33%
+  flex-wrap: wrap
+  margin:
+    top: -40%
+    left: -23%
+    right: 7%
+  color: #FAD873
   font-size: 44em
-  right: 250px
-  top: -150px
   text-decoration: none
-  +shadow(2px)
+  +shadow(8px)
+  +round
   &:hover
     cursor: default
 
 #cloud
-  position: relative
+  width: 33.33%
+  flex-wrap: wrap
+  margin:
+    top: 10%
   color: white
   font-size: 40em
-  top: -390px
-  left: 800px
   text-decoration: none
-  +shadow(-10px)
+  +shadow(-8px)
+  +round
   &:hover
     cursor: default
+
+.btn
+  &:focus
+    outline: none
+
+.weatherInfo
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  margin-top: 5%
+
+.date
+  font-size: 2em
+  color: white
+  font-family: 'Crete Round', serif
+
+.location
+  font-size: 1.5em
+  color: white
+  font-family: 'Crete Round', serif
+
+.temperature
+  align-items: flex-end
+  font-size: 2.5em
+  color: white
+  font-family: 'Crete Round', serif
+  a
+    color: white
+    text-decoration: none
+
+.btn-group
+  display: inline-flex
+  flex-wrap: wrap
+
+.mainIcon
+  font-size: 20em
+  color: white
+  text-decoration: none
+  +shadow(8px)
+  a
+    color: white
+    text-decoration: none
+
 
 @font-face
   font-family: 'MeteoconsRegular'
@@ -52,3 +150,13 @@ body
   src: url('fonts/meteocons-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/meteocons.woff') format('woff'), url('fonts/meteocons.ttf') format('truetype'), url('fonts/meteocons-webfont.svg#MeteoconsRegular') format('svg')
   font-weight: normal
   font-style: normal
+
+//Results
+.skyDay
+  +day
+
+.skyNight
+  +night
+
+.rain
+  +night

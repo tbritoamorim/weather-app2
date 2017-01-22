@@ -1,39 +1,117 @@
+@@@import "compass";
+@-webkit-keyframes circle {
+  50% {
+    text-shadow: -8px -8px 4px black; } }
+@-moz-keyframes circle {
+  50% {
+    text-shadow: -8px -8px 4px black; } }
+@-o-keyframes circle {
+  50% {
+    text-shadow: -8px -8px 4px black; } }
+@keyframes circle {
+  50% {
+    text-shadow: -8px -8px 4px black; } }
 body {
   margin: 0;
-  background-color: #3DDC97;
-  overflow: hidden; }
-
-#start {
-  position: relative;
-  top: -150px;
-  font-size: 3em;
-  left: -220px; }
+  background-color: #337ab7;
+  overflow: hidden;
+  font-family: "Crete Round", serif; }
 
 .icon:before {
   font-family: "MeteoconsRegular";
   content: attr(data-icon); }
 
-#sun {
-  position: relative;
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+#start {
+  width: 100%;
+  padding: 10px;
+  font-size: 3em;
+  border-radius: 5px;
   color: white;
+  box-shadow: 10px 10px 4px black; }
+
+.init {
+  flex-wrap: wrap;
+  margin-top: 10%;
+  margin-left: 15%; }
+
+#sun {
+  width: 33.33%;
+  flex-wrap: wrap;
+  margin-top: -40%;
+  margin-left: -23%;
+  margin-right: 7%;
+  color: #FAD873;
   font-size: 44em;
-  right: 250px;
-  top: -150px;
   text-decoration: none;
-  text-shadow: 2px 4px 4px black; }
+  text-shadow: 8px 8px 4px black;
+  -webkit-animation: circle 4s ease infinite;
+  -moz-animation: circle 4s ease infinite;
+  -o-animation: circle 4s ease infinite;
+  animation: circle 4s ease infinite; }
   #sun:hover {
     cursor: default; }
 
 #cloud {
-  position: relative;
+  width: 33.33%;
+  flex-wrap: wrap;
+  margin-top: 10%;
   color: white;
   font-size: 40em;
-  top: -390px;
-  left: 800px;
   text-decoration: none;
-  text-shadow: -10px 4px 4px black; }
+  text-shadow: -8px 8px 4px black;
+  -webkit-animation: circle 4s ease infinite;
+  -moz-animation: circle 4s ease infinite;
+  -o-animation: circle 4s ease infinite;
+  animation: circle 4s ease infinite; }
   #cloud:hover {
     cursor: default; }
+
+.btn:focus {
+  outline: none; }
+
+.weatherInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%; }
+
+.date {
+  font-size: 2em;
+  color: white;
+  font-family: "Crete Round", serif; }
+
+.location {
+  font-size: 1.5em;
+  color: white;
+  font-family: "Crete Round", serif; }
+
+.temperature {
+  align-items: flex-end;
+  font-size: 2.5em;
+  color: white;
+  font-family: "Crete Round", serif; }
+  .temperature a {
+    color: white;
+    text-decoration: none; }
+
+.btn-group {
+  display: inline-flex;
+  flex-wrap: wrap; }
+
+.mainIcon {
+  font-size: 20em;
+  color: white;
+  text-decoration: none;
+  text-shadow: 8px 8px 4px black; }
+  .mainIcon a {
+    color: white;
+    text-decoration: none; }
 
 @font-face {
   font-family: "MeteoconsRegular";
@@ -41,5 +119,13 @@ body {
   src: url("fonts/meteocons-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/meteocons.woff") format("woff"), url("fonts/meteocons.ttf") format("truetype"), url("fonts/meteocons-webfont.svg#MeteoconsRegular") format("svg");
   font-weight: normal;
   font-style: normal; }
+.skyDay {
+  background-color: #337ab7; }
+
+.skyNight {
+  background-color: #1d4567; }
+
+.rain {
+  background-color: #1d4567; }
 
 /*# sourceMappingURL=stylesheet.css.map */
