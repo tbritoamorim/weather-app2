@@ -6,6 +6,12 @@ $eucalyptus: #3DDC97
 $babyPowder: #FCFCFC
 $magicPotion: #FF495C
 //mixins
+=day
+  background-color: $clearSky
+
+=night
+  background-color: darken($clearSky, 20%)
+
 =shadow($side)
   text-shadow: $side 8px 4px black
 
@@ -97,9 +103,23 @@ body
   &:focus
     outline: none
 
+#mainIcon
+  flex: auto
+  font-size: 44em
+
 @font-face
   font-family: 'MeteoconsRegular'
   src: url('meteocons-webfont.eot')
   src: url('fonts/meteocons-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/meteocons.woff') format('woff'), url('fonts/meteocons.ttf') format('truetype'), url('fonts/meteocons-webfont.svg#MeteoconsRegular') format('svg')
   font-weight: normal
   font-style: normal
+
+//Results
+.clearSkyDay
+  +day
+
+.clearSkyNight
+  +night
+
+.rain
+  +night

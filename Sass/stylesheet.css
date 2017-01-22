@@ -74,11 +74,23 @@ body {
 .btn:focus {
   outline: none; }
 
+#mainIcon {
+  flex: auto;
+  font-size: 44em; }
+
 @font-face {
   font-family: "MeteoconsRegular";
   src: url("meteocons-webfont.eot");
   src: url("fonts/meteocons-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/meteocons.woff") format("woff"), url("fonts/meteocons.ttf") format("truetype"), url("fonts/meteocons-webfont.svg#MeteoconsRegular") format("svg");
   font-weight: normal;
   font-style: normal; }
+.clearSkyDay {
+  background-color: #337ab7; }
+
+.clearSkyNight {
+  background-color: #1d4567; }
+
+.rain {
+  background-color: #1d4567; }
 
 /*# sourceMappingURL=stylesheet.css.map */
