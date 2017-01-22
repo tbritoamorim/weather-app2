@@ -5,6 +5,7 @@ $spanishViolet: #46237A
 $eucalyptus: #3DDC97
 $babyPowder: #FCFCFC
 $magicPotion: #FF495C
+
 //mixins
 =day
   background-color: $clearSky
@@ -68,14 +69,14 @@ body
 .init
   flex-wrap: wrap
   margin:
-    top: 20%
+    top: 10%
     left: 15%
 
 #sun
   width: 33.33%
   flex-wrap: wrap
   margin:
-    top: -30%
+    top: -40%
     left: -23%
     right: 7%
   color: #FAD873
@@ -90,7 +91,7 @@ body
   width: 33.33%
   flex-wrap: wrap
   margin:
-    top: 17%
+    top: 10%
   color: white
   font-size: 40em
   text-decoration: none
@@ -103,9 +104,45 @@ body
   &:focus
     outline: none
 
-#mainIcon
-  flex: auto
-  font-size: 44em
+.weatherInfo
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  margin-top: 5%
+
+.date
+  font-size: 2em
+  color: white
+  font-family: 'Crete Round', serif
+
+.location
+  font-size: 1.5em
+  color: white
+  font-family: 'Crete Round', serif
+
+.temperature
+  align-items: flex-end
+  font-size: 2.5em
+  color: white
+  font-family: 'Crete Round', serif
+  a
+    color: white
+    text-decoration: none
+
+.btn-group
+  display: inline-flex
+  flex-wrap: wrap
+
+.mainIcon
+  font-size: 20em
+  color: white
+  text-decoration: none
+  +shadow(8px)
+  a
+    color: white
+    text-decoration: none
+
 
 @font-face
   font-family: 'MeteoconsRegular'
@@ -115,10 +152,10 @@ body
   font-style: normal
 
 //Results
-.clearSkyDay
+.skyDay
   +day
 
-.clearSkyNight
+.skyNight
   +night
 
 .rain
